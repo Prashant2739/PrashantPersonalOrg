@@ -46,4 +46,8 @@ export default class LightningDatatableLWCExample extends LightningElement {
             this.error = error;
         }
     }
+
+    testMethod(){
+        console.log('Method to check conflict in the git');
+    }
 }
