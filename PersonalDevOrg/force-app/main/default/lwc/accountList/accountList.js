@@ -24,12 +24,6 @@ export default class LightningDatatableLWCExample extends LightningElement {
             fieldName: 'Website',
             type: 'url',
             sortable: true
-        },
-        {
-            label: 'Rating',
-            fieldName: 'Rating',
-            type: 'test',
-            sortable: true
         }
     ];
  
@@ -46,4 +40,5 @@ export default class LightningDatatableLWCExample extends LightningElement {
             this.error = error;
         }
     }
+
 }
