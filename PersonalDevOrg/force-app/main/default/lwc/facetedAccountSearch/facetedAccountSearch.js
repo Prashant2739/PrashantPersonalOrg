@@ -32,7 +32,6 @@ export default class FacetedAccountSearch extends LightningElement {
     emptyFilterValidation = 'Please select atleast one filter to search the Account records.';
     notFoundValidation = 'No desired Accounts found.';
 
-    //Pagination Properties Comments
     pageSizeOptions = [5, 10, 25, 50, 75, 100]; //Page size options
     totalRecords = 0; //Total no.of records
     pageSize = 5; //No.of records to be displayed per page
