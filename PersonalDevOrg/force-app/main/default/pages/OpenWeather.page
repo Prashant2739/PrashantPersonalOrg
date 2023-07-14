@@ -1,0 +1,15 @@
+<apex:page standardController="Account" extensions="TestOpenWeather" showHeader="false" sidebar="false"  lightningstylesheets="true">   
+    <apex:pageBlock title="{!city} Weather">   
+        <apex:pageBlockSection >
+            
+            <apex:outputText label="Temperature" value="{!temp}"></apex:outputText>
+            <apex:outputText label="Humidity" value="{!pressure}"></apex:outputText>
+            <apex:outputText label="Pressure" value="{!humidity}"></apex:outputText>
+            <apex:outputText label="Temp_min" value="{!temp_min}"></apex:outputText>
+            <apex:outputText label="Temp_max" value="{!temp_max}"></apex:outputText>
+            <apex:outputText label="Wind Speed" value="{!Windspeed}"></apex:outputText>
+            <apex:outputText label="Wind Degree" value="{!Winddegree}"></apex:outputText>
+            
+        </apex:pageBlockSection>    
+    </apex:pageBlock>    
+</apex:page>

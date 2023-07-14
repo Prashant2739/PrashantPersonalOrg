@@ -1,0 +1,17 @@
+<apex:page controller="Sample" >
+<apex:form >
+    <apex:pageBlock id="pg" >
+        <apex:pageblockSection >
+            <apex:pageblockSectionItem >Check it to view the button:</apex:pageblockSectionItem>
+            <apex:pageblockSectionItem >
+                <apex:inputCheckbox value="{!option}" >
+                    <apex:actionsupport event="onclick" action="{!change}" reRender="pg"/>
+                </apex:inputCheckbox>                
+            </apex:pageblockSectionItem>            
+        </apex:pageblockSection>
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Submit" rendered="{!bool}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+</apex:form>    
+</apex:page>

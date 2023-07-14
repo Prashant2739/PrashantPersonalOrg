@@ -1,0 +1,11 @@
+<apex:page sidebar="false"> 
+    <div style="Border:10px ridge red;
+                text-align:center;
+                padding:10px;
+                font-size:30px;
+                background:orange;
+                font-family:forte;
+                text-shadow:2px 2px lime;">
+        This is Home Page for AW certifications.
+    </div>
+</apex:page>

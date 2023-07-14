@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	  <aura:attribute name="msg" type="String"></aura:attribute>
+    <div> Rendering Lifecycle Example
+        <b>{!v.msg}</b></div>
+</aura:component>

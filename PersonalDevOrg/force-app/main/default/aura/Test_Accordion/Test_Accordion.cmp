@@ -1,0 +1,111 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <div class="slds-m-left_large">
+        <lightning:buttonGroup>
+            <lightning:button label="Save" title="Save" iconName="utility:save" iconPosition="left"  variant="neutral"/>
+            <lightning:button label="Edit" iconName="utility:edit" iconPosition="left"  variant="neutral"/>
+            <lightning:button label="Delete" iconName="utility:delete" iconPosition="left"  variant="neutral" title="Cancel"/>
+            <lightning:button label="Modify Contract" iconName="utility:edit" iconPosition="left"  variant="neutral"/>
+        </lightning:buttonGroup>
+    </div>
+    
+    <div class="slds-p-around--large">
+        <div class="acc-header" onclick="{!c.panelOne}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left ">
+                    <lightning:icon class="slds-show" aura:id="panelOne" iconName="utility:chevronright" size="x-small" alternativeText="Indicates right"/>
+                    <lightning:icon class="slds-hide" aura:id="panelOne" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates down"/>
+                </div>
+                <div class="slds-m-left--large">Opportunity Details</div>
+            </section>
+        </div>
+        
+        <div class="slds-hide slds-p-around--medium slds-box" aura:id="panelOne">
+            <lightning:recordForm
+                                  recordId="0017F000024ddHGQAY"
+                                  objectApiName="Account"
+                                  layoutType="Compact"
+                                  columns="2"
+                                  mode="readonly"
+                                  />
+        </div>
+        
+        <div class="acc-header" onclick="{!c.panelTwo}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left">
+                    <lightning:icon class="slds-show" aura:id="panelTwo" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="panelTwo" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Contact Details</div>
+            </section>
+        </div>
+        
+        <div class="slds-hide slds-p-around--medium slds-box" aura:id="panelTwo">
+            <lightning:recordForm
+                                  recordId="0017F000024ddHGQAY"
+                                  objectApiName="Account"
+                                  layoutType="Compact"
+                                  columns="2"
+                                  mode="readonly"
+                                  />
+        </div>
+        
+        <div class="acc-header" onclick="{!c.panelThree}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left"> 
+                    <lightning:icon class="slds-show" aura:id="panelThree" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="panelThree" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Account Details</div>
+            </section>
+        </div>
+        
+        <div aura:id="panelThree" class="slds-hide slds-p-around--medium slds-box">
+            <lightning:recordForm
+                                  recordId="0017F000024ddHGQAY"
+                                  objectApiName="Account"
+                                  layoutType="Compact"
+                                  columns="2"
+                                  mode="readonly"
+                                  />
+        </div>
+        
+        <div class="acc-header" onclick="{!c.panelFour}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left"> 
+                    <lightning:icon class="slds-show" aura:id="panelFour" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="panelFour" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Other Info.</div>
+            </section>
+        </div>
+        
+        <div aura:id="panelFour" class="slds-hide slds-p-around--medium slds-box">
+            <lightning:recordForm
+                                  recordId="0017F000024ddHGQAY"
+                                  objectApiName="Account"
+                                  layoutType="Compact"
+                                  columns="2"
+                                  mode="readonly"
+                                  />
+        </div>  
+        
+        <div class="acc-header" onclick="{!c.panelFive}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left"> 
+                    <lightning:icon class="slds-show" aura:id="panelFive" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="panelFive" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Activities</div>
+            </section>
+        </div>
+        
+        <div aura:id="panelFive" class="slds-hide slds-p-around--medium slds-box">
+            <lightning:recordForm
+                                  recordId="0017F000024ddHGQAY"
+                                  objectApiName="Account"
+                                  layoutType="Compact"
+                                  columns="2"
+                                  mode="readonly"
+                                  />        </div>  
+    </div>
+</aura:component>

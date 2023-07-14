@@ -1,0 +1,10 @@
+<apex:page controller="opplist" sidebar="false" title="Opportunity List" >
+    <Apex:pageBlock >
+        <apex:pageBlockTable value="{!Oppo}" var="o">
+            <apex:column value="{!o.Name}"/>
+            <apex:column value="{!o.Type}"/>
+            <apex:column value="{!o.StageName}"/>
+            <apex:column value="{!o.Amount }"/>
+        </apex:pageBlockTable>
+    </Apex:pageBlock>
+</apex:page>

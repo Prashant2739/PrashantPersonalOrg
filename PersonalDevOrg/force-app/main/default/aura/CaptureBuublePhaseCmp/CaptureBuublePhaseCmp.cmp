@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<!--OwnerComp-->
+    <aura:handler name="bubbleCaptureEvent" event="c:CaptureBuublePhase" action="{!c.handleCapture}" phase="capture"/>
+	<aura:handler name="bubbleCaptureEvent" event="c:CaptureBuublePhase" action="{!c.handleBubbling}" />
+    CapturBubblePhase Demo in Console
+    <c:ContainerComp />
+</aura:component>

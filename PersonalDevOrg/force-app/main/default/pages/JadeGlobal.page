@@ -1,0 +1,7 @@
+<apex:page controller="MyFourthController" showHeader="false" sidebar="false">
+    Hello {! Name}
+    <apex:form >
+        <apex:inputText value="{! name}" id="name"/>
+        <apex:commandButton value="Save" action="{!save}"/>
+    </apex:form>
+</apex:page>

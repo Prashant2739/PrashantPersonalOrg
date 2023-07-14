@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="url" type="String"/>
+    <aura:handler name="init" value="{!this }" action="{!c.init}"/>
+    <lightning:button label="Open Lightning Component" onclick="{!c.handleClick}"/>
+    
+</aura:component>

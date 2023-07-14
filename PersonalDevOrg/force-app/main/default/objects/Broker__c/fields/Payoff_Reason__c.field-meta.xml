@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payoff_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Payoff Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deceased Borrower - liquidated by Family/ Estate</fullName>
+                <default>false</default>
+                <label>Deceased Borrower - liquidated by Family/ Estate</label>
+            </value>
+            <value>
+                <fullName>Deed in Lieu of Foreclosure</fullName>
+                <default>false</default>
+                <label>Deed in Lieu of Foreclosure</label>
+            </value>
+            <value>
+                <fullName>Early Liquidation - Excess cash flow/Liquidity from Ops.</fullName>
+                <default>false</default>
+                <label>Early Liquidation - Excess cash flow/Liquidity from Ops.</label>
+            </value>
+            <value>
+                <fullName>Foreclosure/REO</fullName>
+                <default>false</default>
+                <label>Foreclosure/REO</label>
+            </value>
+            <value>
+                <fullName>Foreclosure/Sale at Courthouse</fullName>
+                <default>false</default>
+                <label>Foreclosure/Sale at Courthouse</label>
+            </value>
+            <value>
+                <fullName>Liquidated at Maturity</fullName>
+                <default>false</default>
+                <label>Liquidated at Maturity</label>
+            </value>
+            <value>
+                <fullName>Refinance to AgAmerica Conventional Loan</fullName>
+                <default>false</default>
+                <label>Refinance to AgAmerica Conventional Loan</label>
+            </value>
+            <value>
+                <fullName>Refinance to AgAmerica Pivot Loan</fullName>
+                <default>false</default>
+                <label>Refinance to AgAmerica Pivot Loan</label>
+            </value>
+            <value>
+                <fullName>Refinance to AgAmerica Transitional Loan</fullName>
+                <default>false</default>
+                <label>Refinance to AgAmerica Transitional Loan</label>
+            </value>
+            <value>
+                <fullName>Refinance to Other Lender</fullName>
+                <default>false</default>
+                <label>Refinance to Other Lender</label>
+            </value>
+            <value>
+                <fullName>Renewal to AgAmerica Conventional Loan</fullName>
+                <default>false</default>
+                <label>Renewal to AgAmerica Conventional Loan</label>
+            </value>
+            <value>
+                <fullName>Renewal to AgAmerica Pivot Loan</fullName>
+                <default>false</default>
+                <label>Renewal to AgAmerica Pivot Loan</label>
+            </value>
+            <value>
+                <fullName>Renewal to AgAmerica Transitional loan</fullName>
+                <default>false</default>
+                <label>Renewal to AgAmerica Transitional loan</label>
+            </value>
+            <value>
+                <fullName>Sale of Collateral</fullName>
+                <default>false</default>
+                <label>Sale of Collateral</label>
+            </value>
+            <value>
+                <fullName>Unable to Determine</fullName>
+                <default>false</default>
+                <label>Unable to Determine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<aura:component>
+    <lightning:recordEditForm objectApiName="Account">
+        <lightning:messages />
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning:inputField fieldName="Name"/>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning:inputField fieldName="Industry"/>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning:inputField fieldName="ShippingPostalCode__c"/>
+                </div>
+            </div>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+    </lightning:recordEditForm>
+</aura:component>

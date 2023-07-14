@@ -1,0 +1,13 @@
+<template>
+    <lightning-card variant="narrow" title="Custom Search Component" >
+            <lightning-input name="enter-search" label="Search" type="search" onchange={handleChange}>
+            </lightning-input>
+        <template if:true={showTable}>
+            <div style="height: 300px;">
+                <lightning-datatable key-field="id" data={accList} show-row-number-column hide-checkbox-column
+                    columns={columns}>
+                </lightning-datatable>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,61 @@
+<apex:page standardController="Contact" renderAs="pdf">
+  <!--  <apex:stylesheet value="{!URLFOR($Resource.STR002_ReferencePDFCreatePageCSS)}"/-->
+   <!-- <apex:image url="{!URLFOR($Resource.STR003_ReferencePDFCreatePageClientLogo)}"/>-->
+    <head>
+        <!--style>
+body { font-family: 'Arial Unicode MS'; }
+</style--->
+    </head>
+    <body>
+        <center>
+            <h4>SYNTHESE DE CANDIDATURE</h4>
+            <apex:panelGrid columns="1" width="100%">
+                <!---apex:outputText value="" styleClass="companyName"/--->
+                <apex:outputText value="{!TODAY()}"></apex:outputText>
+            </apex:panelGrid>
+        </center>
+    </body>
+    <table>
+        
+        <td>{!Contact.Name}</td> 
+        <tr><th>Né() le </th>
+            <td><apex:outputText value="{!Contact.Birthdate}"/></td>
+        </tr>
+        <tr><th> Dep :</th>
+            <td><apex:outputText value="{Contact.PlaceOfBirthDepartment__c}"/></td>
+        </tr>
+        <tr><th> Ville :</th>
+            <td><apex:outputText value="{Contact.PlaceOfBirthCity__c}" /></td>
+        </tr>
+        <tr><th>Nº de SS : </th>
+            <td><apex:outputText value=" {Contact.SocialSecurityEncrypted__c}" /></td>
+        </tr>
+		
+        <tr><th>Tel. : </th>
+            <td><apex:outputText value=" {!Contact.Phone}" /></td>
+        </tr>
+        <tr><th> Mobile : </th>
+            <td><apex:outputText value=" {!Contact.OtherPhone}" /></td>
+        </tr>
+        <tr><th>E-mail : </th>
+            <td><apex:outputText value=" {!Contact.email}" /></td>
+        </tr>
+        <tr><th>Nationalité :</th>
+            <td><apex:outputText value=" {Contact.Nationality__c}" /></td>
+        </tr>
+        <tr><th>Personnes à contacter en cas d’urgence :
+            <apex:outputText value="  {Contact.GLD_Emergency_Contact_Name__c} - "/>
+                <apex:outputText value="{Contact.GLD_Emergency_Contact_Phone__c}" /></th>
+        </tr>
+    </table>
+    
+    <h4>ELECTRICIEN BATIMENT (H/F) / ELECTRICIEN INDUSTRIEL (H/F)</h4>
+    <apex:outputText value="{Métier ?} {ClosingReport.ExternalJobTitle__c}"/>
+    
+    <h5>HABILITATIONS : </h5>
+    PRÉP HABILITATION ÉLEC INTERVENTION BR 
+    <apex:outputText value="{Document.Otherdocument.type=Capacitation}"/>
+    
+    <h5>PERMIS : </h5>
+    Je possède un moyen de transport motorisé <apex:outputText value=" {CommonDocument.}" />
+</apex:page>

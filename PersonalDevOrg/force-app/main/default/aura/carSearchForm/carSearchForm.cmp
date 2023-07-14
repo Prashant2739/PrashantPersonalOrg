@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="searchLabel" type="String" default="Search" access="public"></aura:attribute> 
+    <aura:attribute name="newLabel" type="String" default="New"></aura:attribute> 
+    <aura:attribute name="showNew" type="Boolean"></aura:attribute> 
+    <aura:attribute name="carTypes" type="String[]" default="Sports,Sedan,Hatchback"></aura:attribute>  
+    <lightning:layout horizontalAlign="center">
+        <lightning:layoutItem padding="around-medium">
+            <lightning:select name="selectItem" label="All Types" variant="label-hidden" value="Sports" 
+                              aura:id="carTypeList" onchange="newValueSelected">
+                <option value="" text="All Types"/>
+                <aura:iteration items="{!v.carTypes}" var="item">
+                    <option value="{!item}" text="{!item}"/>
+    			</aura:iteration>
+            </lightning:select>           
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem padding="around-medium">
+            <lightning:button variant="brand" label="{!v.searchLabel}" onclick="{!c.onSearchClick}"/>
+            <lightning:button variant="brand" label="Toggle Button" onclick="{!c.toggleButton}"/>
+            
+            <aura:if isTrue="{!v.showNew}">
+                <lightning:button variant="Neutral" label="New"/>
+            </aura:if>
+            
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

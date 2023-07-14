@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div>
+        Component 1   
+    </div> 
+	<aura:attribute name="test" type="String" />  
+    <aura:attribute name="test1" type="String" default="12"/>
+    <lightning:button variant="brand" label="Navigate to Component 2" onclick="{!c.navigate}" />
+    <aura:if isTrue="{!v.test == test1 }">
+    </aura:if>
+</aura:component>

@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute Name="Number1" type="Integer" description="For First Input"/>
+    <aura:attribute Name="Number2" type="Integer" description="For Second Input"/>
+    <aura:attribute Name="output" type="Integer" description="For Showing output"/>
+    
+    <lightning:input type="Number" value="{!v.Number1}" label="Enter first No." required="true" />
+    <lightning:input type="Number" value="{!v.Number2}" label="Enter second No." required="true" />
+    
+    <lightning:button variant="brand" label="Add" title="brand action" onclick="{! c.doAdd }"/>
+    <lightning:button variant="brand" label="Subtract"  onclick="{!c.doSub}"/>
+    <lightning:button variant="brand" label="Multiply"  onclick="{!c.doMult}"/>
+    <lightning:button variant="brand" label="Divide" onclick="{!c.doDivide}"/>
+    
+    The output is : - {!v.output}
+</aura:component>

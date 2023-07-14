@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:includeLightning /> 
+    <apex:outputText >You are in VF Page</apex:outputText>
+    <div id="locationID">
+        
+    </div>
+    <script>   
+    	$Lightning.use("c:DependencyAppTEst", function(){
+        	$Lightning.createComponent("c:CalculatorUtility", {}, "locationID", function(cmp){
+            Console.log("Lightning Out Sucess");});
+        
+        
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page standardController="Account" recordSetVar="acts">
+    <apex:form >
+        <apex:pageBlock title="Passing of Parameters">
+            <apex:pageBlockSection columns="3">
+                <apex:pageBlockTable value="{!acts}" var="acc">
+                    <apex:column >
+                        <apex:commandLink value="{!acc.Name}" reRender="onlyThisBlock">
+                            <apex:param name="x" value="{!acc.id}"/>
+                            <apex:param name="y" value="{!acc.name}"/>
+                        </apex:commandLink>    
+                    </apex:column>
+                    <apex:column value="{!acc.Name}" />
+                    <apex:column value="{!acc.Industry}" />
+                    <apex:column value="{!acc.Type}" />
+                    <apex:column value="{!acc.Phone}" />
+                </apex:pageBlockTable>
+                <apex:pageBlock title="{!$CurrentPage.parameters.y}" id="onlyThisBlock" >                   
+                    <apex:detail subject="{!$CurrentPage.parameters.x}" relatedList="false"/>
+                </apex:pageBlock>
+                <apex:pageBlock >                   
+                    Prashant Rupnur........
+                </apex:pageBlock>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

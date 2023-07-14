@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Activate_Employment_Contract_Access</name>
+        <label>Activate Employment Contract Access</label>
+        <locationX>77</locationX>
+        <locationY>69</locationY>
+        <actionName>activateSessionPermSet</actionName>
+        <actionType>activateSessionPermSet</actionType>
+        <inputParameters>
+            <name>PermSetName</name>
+            <value>
+                <elementReference>ContractAccessPermSet</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <constants>
+        <name>ContractAccessPermSet</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Employment_Contracts_Access</stringValue>
+        </value>
+    </constants>
+    <interviewLabel>Activate Contracts Access {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Activate Contracts Access</label>
+    <processType>Flow</processType>
+    <startElementReference>Activate_Employment_Contract_Access</startElementReference>
+    <status>Draft</status>
+</Flow>

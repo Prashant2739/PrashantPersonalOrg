@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>setting</label>
+    <protected>false</protected>
+    <values>
+        <field>AWS_Access_Key_Id__c</field>
+        <value xsi:type="xsd:string">AKIAIXRXLAZBXKAYQ4MA</value>
+    </values>
+    <values>
+        <field>AWS_Secret_Access_Key__c</field>
+        <value xsi:type="xsd:string">+LS5H4EloyZnI21PQ9Yud9I7xGbzvIEo8PCktL6p</value>
+    </values>
+    <values>
+        <field>S3_Bucket_Name__c</field>
+        <value xsi:type="xsd:string">prashant-rupnur-salesforce</value>
+    </values>
+    <values>
+        <field>S3_Region_Name__c</field>
+        <value xsi:type="xsd:string">us-east-1</value>
+    </values>
+</CustomMetadata>

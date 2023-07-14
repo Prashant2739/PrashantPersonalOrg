@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId,lightning:isUrlAddressable" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+ 
+    <aura:attribute name="firstName" type="String" />
+    <aura:attribute name="lastName" type="String" />
+    <div>
+        Full Name : {!v.firstName} + {!v.lastName}
+    </div>
+</aura:component>

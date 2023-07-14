@@ -1,0 +1,10 @@
+<template>
+    <template if:true={accList}>
+        <lightning-datatable data={accList} columns={columns} show-row-number-column
+         hide-checkbox-column key-field="Id">
+        </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

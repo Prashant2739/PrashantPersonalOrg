@@ -1,0 +1,16 @@
+<apex:page controller="C7">
+<apex:form >
+    <apex:pageBlock title="My Search Interface" >
+        <apex:inputText value="{!keyword}"/>
+        <apex:commandButton value="Search" action="{!Srearch_Now}"/>
+        
+        <apex:pageblockTable value="{!results}" var="r">
+            <apex:column value="{!r.Name}"/>
+            <apex:column value="{!r.Type}"/>
+            <apex:column value="{!r.Industry}"/>
+            <apex:column value="{!r.Phone}"/>
+            <apex:column value="{!r.Fax}"/>
+        </apex:pageblockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

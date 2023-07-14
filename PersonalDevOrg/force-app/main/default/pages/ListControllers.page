@@ -1,0 +1,14 @@
+<apex:page standardController="Opportunity" recordSetVar="Oppo">
+<apex:form >
+    <apex:pageBlock title="Opportunity List">
+        <apex:pageBlockTable value="{!Oppo}" var="a">
+            <Apex:column value="{!a.Account.name}"/>
+           
+            <Apex:column value="{!a.StageName}"/>
+            <Apex:column value="{!a.Amount}"/>
+            <Apex:column value="{!a.Name}"/>
+            <apex:inlineEditSupport />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+ </apex:form> 
+</apex:page>

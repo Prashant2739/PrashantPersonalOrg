@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">  
+    <aura:attribute name="options" type="List" default="[{'label': 'Event', 'value': 'Event'},
+                                                        {'label': 'Task/Call', 'value': 'Task'},
+                                                        {'label': 'File', 'value': 'File'},
+                                                        {'label': 'Lead', 'value': 'Lead'},
+                                                        {'label': 'Account', 'value': 'Account'},
+                                                        {'label': 'Contact', 'value': 'Contact'},
+                                                        {'label': 'Opportunity', 'value': 'Opportunity'},
+                                                        {'label': 'Case', 'value': 'Case'},
+                                                        {'label': 'Product', 'value': 'Product2'},
+                                                        {'label': 'Product Price', 'value': 'Product_Prices__c'},
+                                                        {'label': 'Report', 'value': 'Report'},
+                                                        {'label': 'Competitor Information', 'value': 'Opportunity_Competitor__c'},
+                                                        {'label': 'Call Report', 'value': 'Call_Report__c'},
+                                                        {'label': 'Contract Document', 'value': 'Contract_Document__c'},
+                                                        {'label': 'TDRA Document', 'value': 'TDRA_Document__c'}]"/>
+    <aura:attribute name="objectName" type="String" />
+    <lightning:card>
+        <lightning:combobox aura:id="createRecord" name="general" label="Create New" placeholder="Create" options="{!v.options }" onchange="{!c.handleChange }"/>
+    </lightning:card>    
+</aura:component>

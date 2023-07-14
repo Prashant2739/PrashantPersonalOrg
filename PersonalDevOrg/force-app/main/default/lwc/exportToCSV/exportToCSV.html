@@ -1,0 +1,7 @@
+<template>  
+    <a target="_self" class="slds-button" download="ExportToCSV.csv" href={hrefdata} onclick={exportToCSV}  
+      style="margin-left: 80%;">Download Excel</a>  
+    <lightning-datatable data={contactList} columns={contactColumns} key-field="id"  
+      hide-checkbox-column="true">  
+    </lightning-datatable>  
+  </template>

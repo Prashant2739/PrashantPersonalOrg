@@ -1,0 +1,3 @@
+<aura:component >
+    I am in second component
+</aura:component>

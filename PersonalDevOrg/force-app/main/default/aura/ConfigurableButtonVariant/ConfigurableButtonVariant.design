@@ -1,0 +1,7 @@
+<design:component>
+    <design:attribute name="buttonVariant"
+                      label="Button Variant"
+                      datasource="brand,success,destructive" />
+    <design:attribute name="buttonLabel" label="Button CTA" />
+    <design:attribute name="showHide" label="Show/Hide Button" />
+</design:component>

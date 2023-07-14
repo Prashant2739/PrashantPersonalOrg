@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Single Photo Album</masterLabel>
+    <description>Displays all the images associated with a Photo Album record in a gallery view.</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightningCommunity__Default">
+            <property required="true" label="Photo Album Record ID" name="recordId" type="String" default="{!recordId}" description="The 15/18 digit ID of the Photo Album record whose photos should be displayed. If set to {!recordId} and the Lightning Component is placed on a Photo Album object detail page, the photos associated with the Photo Album record that is being viewed will be displayed."/>
+            <property required="true" label="Default No. of Photos" name="limitPhotos" type="Integer" min="1" max="80" default="20" description="The number of photos that should be displayed in the Lightning Component by default."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

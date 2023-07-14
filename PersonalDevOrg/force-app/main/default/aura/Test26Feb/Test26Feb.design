@@ -1,0 +1,3 @@
+<design:component label="My records component">
+	<design:attribute name="objectNamesForDesign" label="Object Names" description="Api name of Objects seperated by comma" />
+</design:component>

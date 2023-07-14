@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="message" type="String"
+                    default="------ Hello From Parent -----"/>
+    <c:AuraMethodChildComponent aura:id="childComponent"/>
+    
+    <div class="slds-m-around_xx-large">
+        <lightning:button variant="brand" label="Call Aura Method"
+                          onclick="{!c.callAuraMethod}" />
+        <BR></BR> <BR></BR>
+        <p>{!v.message}</p>
+    </div>
+</aura:component>

@@ -1,0 +1,4 @@
+<apex:page controller="Print" sidebar="true" showHeader="false">
+  {!First}<br/>
+  {!Last}
+</apex:page>

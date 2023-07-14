@@ -1,0 +1,23 @@
+<apex:page >
+    
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js">
+    </script>
+    
+    <script type="text/javascript">
+        
+        AWS.config.update(
+        {
+            accessKeyId: "AKIAIXRXLAZBXKAYQ4MA",
+            secretAccessKey: "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",
+            region_config: "us-east-1" 
+        }
+    );
+    var s23 = new AWS.S3();
+    var y="img-7_community_housing.png";
+    
+        var params = {Bucket: 'prashant-rupnur-salesforce', Key: y};
+    s23.getSignedUrl('getObject', params, function (err, url) {
+        window.open(url,"_self");
+    });
+    </script>
+</apex:page>

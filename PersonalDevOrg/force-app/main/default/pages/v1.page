@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>First VisualForce Page</h1>
+  This is your new Page: Enjoy Coding
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

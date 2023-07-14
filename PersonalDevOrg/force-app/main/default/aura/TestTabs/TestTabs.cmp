@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <div class="slds-box bg_white">
+        <lightning:tabset variant="vertical">
+            <lightning:tab label="Opportunity Details" id="one">
+                <c:Test_Accordion/>
+            </lightning:tab>
+            <lightning:tab label="Quotes" id="two">
+                <c:Test_Accordion/>
+            </lightning:tab>
+            <lightning:tab label="Open Activities" id="three">
+                Content in Tab Three
+            </lightning:tab>
+            <lightning:tab label="Activity History" id="four">
+                Content in Tab four
+            </lightning:tab>
+            <lightning:tab label="Others" id="five">
+                Content in Tab five
+            </lightning:tab>
+            
+        </lightning:tabset>	
+    </div>    
+</aura:component>

@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-is-fixed slds-size_full modal">
+        <div class="slds-media_center slds-grid_align-center slds-size_full slds-p-around_none modal-content">
+            <div class="slds-text-color_inverse slds-is-absolute close">
+                <lightning-button-icon icon-name="utility:share" variant="bare-inverse" size="large" onclick={sharePhoto} class="slds-var-m-left_medium"></lightning-button-icon>
+                <lightning-button-icon icon-name="utility:close" variant="bare-inverse" size="large" onclick={closeModal} class="slds-var-m-left_medium"></lightning-button-icon>
+            </div>
+            <template if:true={currentPhoto}>
+                <!-- Photo number -->
+                <div class="slds-is-absolute slds-var-p-around_x-small numbertext">{photoCountText}</div>
+                <!-- Full photo section -->
+                <div class="mySlides slds-is-relative">
+                    <template if:false={isLoaded}>
+                        <div class="slds-is-absolute slds-size_full custom-spinner-container">
+                            <lightning-spinner alternative-text="Loading..." variant="inverse" size="large"></lightning-spinner>
+                        </div>
+                    </template>
+                    <img class="slds-hide slds-media_responsive full-image" src={currentPhoto.fullPhotoUrl} alt={currentPhoto.name} onload={handleImgLoad}>
+                </div>
+                <!-- Nav buttons -->
+                <a class="slds-text-color_inverse slds-col_padded-around-medium slds-is-absolute prev" onclick={handlePrev}>&#10094;</a>
+                <a class="slds-text-color_inverse slds-col_padded-around-medium slds-is-absolute next" onclick={handleNext}>&#10095;</a>
+                <!-- Caption Section -->
+                <div class="slds-text-color_inverse slds-text-align_center caption-container">
+                    <template if:true={displayCaption}>
+                        <p>{getPhotoCaption}</p>
+                    </template>
+                </div>
+            </template>
+            <!-- Thumbnail section -->
+            <div class="slds-is-fixed thumbnails">
+                <div class="slds-grid_align-center slds-media_center slds-size_full thumbnail-wrapper">
+                    <template for:each={listOfPhotos} for:item="eachPhoto" for:index="index">
+                        <div key={eachPhoto.key} class="column">
+                            <img class="slds-size_full demo cursor" data-id={index} src={eachPhoto.photoUrl} onclick={handlePhotoClick} alt={eachPhoto.key}>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

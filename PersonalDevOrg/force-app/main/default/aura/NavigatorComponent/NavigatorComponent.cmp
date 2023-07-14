@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="AccountController">
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    <lightning:navigation aura:id="navService"/>
+    
+    
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <lightning:card title="Navigator Component">
+        <div style="padding: 20px">
+            <lightning:formattedText value="This is navigator component. Click on Edit button to navigate to another component and edit it." />
+            <lightning:datatable
+                                 keyField="id"
+                                 data="{! v.data }"
+                                 columns="{! v.columns }"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.handleRowAction }"/>
+        </div>
+    </lightning:card>
+</aura:component>

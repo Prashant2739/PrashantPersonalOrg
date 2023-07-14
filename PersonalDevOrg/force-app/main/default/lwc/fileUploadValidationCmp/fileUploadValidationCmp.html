@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="File Upload">
+        <lightning-input type="file" label="Select a PDF file" onchange={handleFileChange}></lightning-input>
+        <lightning-button label="Upload" onclick={handleUpload} disabled={isUploading}></lightning-button>
+    </lightning-card>
+</template>

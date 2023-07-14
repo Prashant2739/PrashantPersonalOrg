@@ -1,0 +1,29 @@
+<apex:page controller="opplist" sidebar="false" showHeader="false" lightningStylesheets="true" >
+    <apex:form >
+        <apex:pageBlock title="List Of Account and Opportunity">
+            
+            <apex:pageBlockSection >
+          
+                <apex:pageBlock title="List Of Accounts (Custom Controllers)">
+                    <apex:pageBlockTable value="{!ACC}" var="acts">
+
+                        <apex:column value="{!acts.Name}"/>
+                        <apex:column value="{!acts.Industry}"/>
+                        <apex:column value="{!acts.Type}"/>
+                        <apex:column value="{!acts.Website}"/>
+                        <apex:column value="{!acts.fax}"/>    
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+                <apex:pageBlock title="List Of Opportunity(Custom Controllers)">
+                    <apex:pageBlockTable value="{!oppo}" var="opp">
+                        <apex:column value="{!opp.Name}"/>
+                        <apex:column value="{!opp.StageName}"/>
+                        <apex:column value="{!opp.Type}"/>
+                        <apex:column value="{!opp.Amount}"/>    
+                    </apex:pageBlockTable>
+                </apex:pageBlock>       
+            </apex:pageBlockSection>  
+            <apex:commandButton value="Go to tab View" action="{!tab}"/>   
+        </apex:pageBlock> 
+    </apex:form>    
+</apex:page>

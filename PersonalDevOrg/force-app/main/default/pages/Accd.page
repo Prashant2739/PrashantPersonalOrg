@@ -1,0 +1,5 @@
+<apex:page controller="AccDetail" sidebar="false" showHeader="false">
+  {!ACC.Name}
+  {!ACC.Industry}
+
+</apex:page>

@@ -1,0 +1,17 @@
+<aura:component  implements="force:appHostable">
+    
+    <aura:attribute name="item" type="Camping_Item__c"/>
+    
+    
+    <lightning:input label="Name:" type="Text" readonly="true" value="{!v.item.Name}"/>
+    
+    
+    <lightning:input label="Price:" type="Number" readonly="true" formatter="currency" step="0.01" value="{!v.item.Price__c}"/>
+    
+    
+    <lightning:input label="Quantity:" type="Number" readonly="true" value="{!v.item.Quantity__c}"/>
+    
+    
+    <lightning:input label="Packed!" type="Checkbox" readonly="true" value="{!v.item.Packed__c}"/>
+    
+</aura:component>

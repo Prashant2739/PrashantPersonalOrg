@@ -1,0 +1,5 @@
+<aura:component implements="force:lightningQuickAction" access="global">
+    
+    <c:opportunityProductRecords></c:opportunityProductRecords>
+	
+</aura:component>

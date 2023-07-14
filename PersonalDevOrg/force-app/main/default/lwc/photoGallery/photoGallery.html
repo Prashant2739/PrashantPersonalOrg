@@ -1,0 +1,39 @@
+<template>
+    <!-- Using custom card using SLDS design to support customization -->
+    <article class="slds-card custom-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body slds-align_absolute-center slds-text-title_bold slds-text-title_caps">
+                    <h2 class="slds-card__header-title slds-card__header-link slds-truncate">{photoAlbumName}</h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-is-relative">
+                <!-- Photo Thumbnails -->
+                    <div class="slds-var-p-horizontal_medium">
+                        <div class="photo-grid">
+                            <template for:each={listOfPhotos} for:item="eachPhoto" for:index="index">
+                                <img key={eachPhoto.name} class="slds-show_inline-block card" 
+                                    src={eachPhoto.photoUrl}
+                                    alt={eachPhoto.name}
+                                    data-id={index}
+                                    onclick={handlePhotoClick}/>
+                            </template>
+                        </div>
+                    </div>
+                    <!-- Gallery Navigation -->
+                    <div class="slds-align_absolute-center slds-var-m-top_small slds-var-p-vertical_x-small">
+                        <lightning-button-icon onclick={firstPage} disabled={navigationButtonState.firstPage} icon-name="utility:macros" variant="bare" class="slds-var-m-left_xx-small" style="transform: rotate(180deg);" size="large"></lightning-button-icon>
+                        <lightning-button-icon onclick={previousPage} disabled={navigationButtonState.prevPage} icon-name="utility:left" variant="bare" class="slds-var-m-left_xx-small" size="large"></lightning-button-icon>
+                        <lightning-button-icon onclick={nextPage} disabled={navigationButtonState.nextPage} icon-name="utility:right" variant="bare" class="slds-var-m-left_xx-small" size="large"></lightning-button-icon>
+                        <lightning-button-icon onclick={lastPage} disabled={navigationButtonState.lastPage} icon-name="utility:macros" variant="bare" class="slds-var-m-left_xx-small" size="large"></lightning-button-icon>
+                    </div>
+            </div>
+        </div>
+    </article>
+    <!-- Independent component for photo modal - Toggled when photo selected-->
+    <template if:true={modalVisibility}>
+        <c-photo-modal display-caption={isDisplayPhotoCaptionEnabled} list-of-photos={listOfPhotos} full-photo-list={fullPhotoList} current-photo={currentPhoto} onclosemodal={closeModal}></c-photo-modal>
+    </template>
+</template>

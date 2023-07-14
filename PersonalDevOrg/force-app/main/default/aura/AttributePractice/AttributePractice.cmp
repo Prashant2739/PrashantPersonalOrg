@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="Colours" type="string[]" default="['Red','Yellow','Green']" access="Private"/>
+    {!v.Colours[0]}
+    
+    
+    <lightning:input aura:id="testInput" label="Enter Age "/> 
+    <lightning:button label="Component Methods" value="Component Methods" onclick="{!c.doClick}"/>
+</aura:component>

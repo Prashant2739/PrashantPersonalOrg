@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#21B11E</headerColor>
+        <logo>meeting</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Conference</label>
+    <navType>Standard</navType>
+    <tabs>Session__c</tabs>
+    <tabs>Speaker__c</tabs>
+    <tabs>Professional_Follow_up__c</tabs>
+    <tabs>Project__c</tabs>
+    <tabs>Book__c</tabs>
+    <tabs>Assignment__c</tabs>
+    <tabs>Photo_Album__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Session_UtilityBar</utilityBar>
+</CustomApplication>

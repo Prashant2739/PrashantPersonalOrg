@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:recordForm
+        recordId="0067F00000Uyp87QAB"
+        objectApiName="Opportunity"
+        layoutType="Full"
+        mode="readonly" />
+</aura:component>

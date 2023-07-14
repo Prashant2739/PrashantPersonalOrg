@@ -1,0 +1,26 @@
+<apex:page controller="opplist" sidebar="true">
+<apex:form >   
+    <apex:pageBlock title="List of Accounts by tabs">
+        <apex:tabPanel >
+            <apex:tab label="Channel Type Accounts" labelwidth="350">
+                <apex:pageBlockTable value="{!ACC}" var="a">
+                    <apex:column value="{!a.Name}"/>
+                    <apex:column value="{!a.Industry}"/>                    
+                    <apex:column value="{!a.Type}"/>
+                    <apex:column value="{!a.Website}"/>
+                    <apex:column value="{!a.fax}"/>                                                        
+                </apex:pageBlockTable>  
+            </apex:tab>  
+            <apex:tab label="Closed Won Opportunities records" labelwidth="350">
+                <apex:pageBlockTable value="{!Oppo}" var="o">
+                    <apex:column value="{!o.Name}"/>
+                    <apex:column value="{!o.StageName}"/>                    
+                    <apex:column value="{!o.Type}"/>
+                    <apex:column value="{!o.Amount}"/>                                                       
+                </apex:pageBlockTable>  
+            </apex:tab>                                  
+        </apex:tabPanel> 
+            <apex:commandButton value="Go to Section View" action="{!Section}"/> 
+    </apex:pageBlock>
+</apex:form>    
+</apex:page>
